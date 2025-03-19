@@ -1,81 +1,63 @@
+<link rel="stylesheet" href="../css/sidebar.css" />
 <div class="wrapper">
-    <aside class="sidebar">
-        <div class="d-flex">
-            <button id="toggle-btn" type="button">
-                <i class="fa fa-th-large" aria-hidden="true"></i>
-            </button>
-            <div class="sidebar-logo">
-                <a href="#">Enrollment System</a>
-            </div>
+    <aside id="sidebar" class="sidebar">
+        <div class="d-flex mx-1">
+                <a href="#" class="sidebar-link" id="toggle-btn" type="button">
+                        <i class="fas fa-bars" id="toggle-icon"></i>
+                        <!-- <span>Collapse</span> -->
+                         <!-- Changed to hamburger -->
+                </a>    
         </div>
         <ul class="sidebar-nav">
+
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <i class="lni lni-user"></i>
-                    <span>Profile</span>
+                <a href="#" class="sidebar-link active">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
                 </a>
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link">
-                    <i class="lni lni-agenda"></i>
-                    <span>Task</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#auth"
-                    aria-expanded="false" aria-controls="auth">
-                    <i class="lni lni-protection"></i>
-                    <span>Auth</span>
-                </a>
-                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">Login</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">Register</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                    data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
-                    <i class="lni lni-layout"></i>
-                    <span>Multi Level</span>
-                </a>
-                <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#multi-two"
-                            aria-expanded="false" aria-controls="multi-two">
-                            Two Links
-                        </a>
-                        <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Link 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Link 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <i class="lni lni-popup"></i>
-                    <span>Notification</span>
+                    <i class="fas fa-users"></i>
+                    <span>Students</span>
                 </a>
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link">
-                    <i class="lni lni-cog"></i>
-                    <span>Setting</span>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Teachers</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-book"></i>
+                    <span>Subject/Section</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>Payment Tracking</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Class Schedule</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Reports</span>
                 </a>
             </li>
         </ul>
         <div class="sidebar-footer">
-            <a href="#" class="sidebar-link">
-                <i class="lni lni-exit"></i>
-                <span>Logout</span>
+            <hr>
+            <a href="#" class="sidebar-link leave-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Leave</span>
             </a>
         </div>
     </aside>

@@ -40,10 +40,6 @@ header i {
   font-size: 20px;
 }
 
-main {
-  padding: 2rem;
-}
-
 .vl {
   border-left: 2px solid rgb(111, 111, 111);
   height: 30px;
@@ -63,8 +59,34 @@ main {
   margin-top: 0;
 }
 
-.wrapper .sidebar .d-flex .sidebar-logo img {
-  width: 30px;
-  height: 30px;
-  margin-top: 0;
+/* New wrapper styles */
+.wrapper {
+  display: flex;
+  min-height: calc(100vh - 54px); /* Adjust based on header height */
+}
+
+/* Assuming sidebar has a class of .sidebar */
+.sidebar {
+  width: 200px; /* Default sidebar width */
+  transition: width 0.3s ease; /* Smooth transition for toggle */
+  background: #f8f8f8; /* Example background */
+}
+
+/* Main content styles */
+.main-content {
+  flex-grow: 1; /* Takes up remaining space */
+  margin-left: 0;
+  padding: 2rem;
+  max-width: calc(100% - 200px);
+  transition: max-width 0.3s ease; 
+}
+
+/* Sidebar collapsed state (adjust based on your JS toggle logic) */
+.sidebar.collapsed {
+  width: 0;
+  overflow: hidden; /* Hides content when collapsed */
+}
+
+.sidebar.collapsed + .main-content {
+  max-width: 100%; /* Full width when sidebar is collapsed */
 }
