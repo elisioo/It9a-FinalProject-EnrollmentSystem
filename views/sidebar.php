@@ -12,10 +12,10 @@
     <div class="sidebar-header">
         <span class="logo">Enrollment System</span>
         <button id="toggle-btn" type="button">
-            <i class="fas fa-bars"></i> <!-- Keeping your original FontAwesome bars icon -->
+        <i class="fa-solid fa-bars-staggered"></i> <!-- Keeping your original FontAwesome bars icon -->
         </button>
-    </div>
-    <ul>
+    </div>  
+    <ul>    
         <!-- Dashboard -->
         <li class="<?= ($current_page == 'dashboard') ? 'active' : '' ?>">
             <a href="../layout/web-layout.php?page=dashboard">

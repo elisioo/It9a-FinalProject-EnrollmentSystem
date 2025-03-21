@@ -22,19 +22,30 @@ $username = ucfirst($_SESSION['username']);
 </head>
 
 <body>
+    <header id="navbar" class="shadow-sm">
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="logo" class="logo" />
+        </div>
+        <div class="vl"></div>
+        <h2>Enrollment System</h2>
+        <div class="profile-container">
+            <i class="fa-solid fa-circle-user"></i>
+            <p><?php echo $username; ?></p>
+        </div>
+    </header>
     <?php include '../views/sidebar.php'; ?>
     <main id="main-content">
         <?php
-    $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
-    $allowed_pages = ['dashboard', 'students', 'teachers', 'subjects', 'sections', 'payment', 'class_schedule', 'reports', 'accounts'];
-    $page_path = __DIR__ . "/../views/{$page}.php";
+        $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
+        $allowed_pages = ['dashboard', 'students', 'teachers', 'subjects', 'sections', 'payment', 'class_schedule', 'reports', 'accounts'];
+        $page_path = __DIR__ . "/../views/{$page}.php";
 
-    if (in_array($page, $allowed_pages) && file_exists($page_path)) {
-      include $page_path;
-    } else {
-      echo "<h2>Page not found</h2>";
-    }
-    ?>
+        if (in_array($page, $allowed_pages) && file_exists($page_path)) {
+          include $page_path;
+        } else {
+          echo "<h2>Page not found</h2>";
+        }
+        ?>
     </main>
 </body>
 

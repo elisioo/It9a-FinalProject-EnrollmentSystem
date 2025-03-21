@@ -1,114 +1,5 @@
 <link rel="stylesheet" href="../css/students.css">
-<style>
-    .search-container-dash {
-        margin-top: 10px !important;
-        position: relative !important;
-    }
 
-    .search-container-dash input {
-        width: 350px !important;
-        height: 40px !important;
-        font-size: 16px !important;
-        padding: 10px 20px 10px 40px !important;
-        border-radius: 30px !important;
-        border: 1px solid var(--line-clr) !important;
-
-    }
-
-    .search-container-dash i {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
-        color: #bbc0c9 !important;
-        font-size: 18px;
-        pointer-events: none;
-    }
-
-    tr {
-        cursor: pointer;
-        height: 50px !important;
-    }
-
-    /* Style for the filters container */
-    .filters {
-        margin-top: 20px;
-    }
-
-    /* Style for the tabs */
-    .tabs {
-        display: flex;
-        gap: 15px;
-    }
-
-    .tab {
-        background: none;
-        border: none;
-        padding: 8px 16px;
-        font-size: 14px;
-        color: #333;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .tab.active {
-        color: #007bff !important;
-        border-bottom: 2px solid #007bff !important;
-    }
-
-    .tab:hover {
-        color: #007bff;
-    }
-
-    /* Style for the dropdowns */
-    .dropdowns {
-        display: flex;
-        gap: 10px;
-    }
-
-    .form-select {
-        padding: 8px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #fff;
-    }
-
-    /* Style for the Add Student button */
-    .add-student {
-        padding: 8px 16px;
-        font-size: 14px;
-        border-radius: 20px;
-        background-color: #007bff;
-        border: none;
-    }
-
-    .add-student:hover {
-        background-color: #0056b3;
-    }
-
-    /* Adjust the search bar to match the image */
-    .search-container-dash {
-        position: relative;
-        width: 300px;
-    }
-
-    .search-container-dash input {
-        width: 100%;
-        padding: 8px 40px 8px 10px;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        font-size: 14px;
-    }
-
-    .search-container-dash .fa-magnifying-glass {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #666;
-    }
-</style>
 <div class="col-md-12 students-content">
     <div class="row mb-3">
         <div class="row">
@@ -126,7 +17,7 @@
                                         style="display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid #ddd; border-radius: 4px; max-height: 200px; overflow-y: auto; z-index: 1000;">
                                     </div>
                                 </div>
-                            </form>
+                            </form> 
                         </div>
                     </div>
 
