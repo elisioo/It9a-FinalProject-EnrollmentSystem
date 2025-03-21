@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List of Students</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .search-bar {
+        position: relative;
+        width: 300px;
+      }
+
+      .search-bar input {
+        width: 100%;
+        padding: 8px 30px 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .filters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .tabs {
+        display: flex;
+        gap: 10px;
+      }
+
+      .tab {
+        padding: 8px 16px;
+        border: none;
+        background: none;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .tab.active {
+        border-bottom: 2px solid #007bff;
+        color: #007bff;
+      }
+
+      .dropdowns {
+        display: flex;
+        gap: 10px;
+      }
+
+      select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      .add-student {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>List of Students</h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Search here..." />
+          <span class="search-icon">🔍</span>
+        </div>
+      </div>
+      <div class="filters">
+        <div class="tabs">
+          <button class="tab active">ALL Students</button>
+          <button class="tab">STEM</button>
+          <button class="tab">ABM</button>
+          <button class="tab">HUMMMS</button>
+        </div>
+        <div class="dropdowns">
+          <select>
+            <option>Filter by</option>
+            <!-- Add filter options here -->
+          </select>
+          <select>
+            <option>Sort by</option>
+            <!-- Add sort options here -->
+          </select>
+        </div>
+        <button class="add-student">Add Student</button>
+      </div>
+    </div>
+  </body>
+</html>
