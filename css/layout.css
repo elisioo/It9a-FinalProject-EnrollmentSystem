@@ -40,7 +40,7 @@ body {
   position: sticky !important;
   top: 0 !important;
   align-self: start !important;
-  transition: width 300ms ease-in-out !important; /* Only transition width for sidebar */
+  transition: width 300ms ease-in-out !important;
   overflow: hidden !important;
   text-wrap: nowrap !important;
 }
@@ -51,7 +51,7 @@ body {
 }
 
 #sidebar.close a span {
-  display: none !important; /* Hide spans when collapsed */
+  display: none !important;
 }
 
 #sidebar.close a {
@@ -66,8 +66,8 @@ body {
   align-items: center !important;
   padding: 5px 1em !important;
   margin-bottom: 16px !important;
-  transition: transform 300ms ease-in-out !important; /* Transition for sliding effect */
-  transform: translateX(0) !important; /* Default position */
+  transition: transform 300ms ease-in-out !important;
+  transform: translateX(0) !important;
 }
 
 #sidebar.close .sidebar-header span {
@@ -79,18 +79,16 @@ body {
   font-weight: 600 !important;
 }
 
-/* Hide the logo when sidebar is collapsed (optional, can remove if relying solely on transform) */
 #sidebar.close .logo {
   display: none !important;
 }
 
-/* Ensure toggle button stays visible and centered when collapsed */
 #sidebar.close #toggle-btn {
   padding: 1em 0 !important;
   width: 100% !important;
   display: flex !important;
   justify-content: center !important;
-  transform: translateX(0) !important; /* Keep toggle button in place */
+  transform: translateX(0) !important;
 }
 
 #sidebar ul {
@@ -101,18 +99,22 @@ body {
   flex-grow: 1 !important;
 }
 
-#sidebar ul li.active a {
-  color: var(--accent-clr) !important;
+/* Active state for top-level items */
+#sidebar ul li.active {
+  background-color: var(--accent-clr) !important;
+  border-radius: 0.5em !important;
 }
 
-#sidebar ul li.active a i,
-#sidebar ul li.active a svg {
-  color: var(--accent-clr) !important;
-  fill: var(--accent-clr) !important;
+#sidebar ul li.active > a {
+  color: whitesmoke !important;
 }
 
+#sidebar ul li.active > a i {
+  color: whitesmoke !important;
+}
+
+/* General link styling */
 #sidebar a,
-#sidebar .dropdown-btn,
 #sidebar .logo {
   border-radius: 0.5em !important;
   padding: 0.85em !important;
@@ -123,90 +125,88 @@ body {
   gap: 1em !important;
 }
 
-.dropdown-btn {
-  width: 100% !important;
-  text-align: left !important;
-  background: none !important;
-  border: none !important;
-  font: inherit !important;
-  cursor: pointer !important;
+/* Section header (non-clickable, just a label) */
+#sidebar .section-header {
+  padding: 0.85em !important;
+  color: var(--text-clr) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1em !important;
+  font-weight: 600 !important; /* Make it stand out */
 }
 
-#sidebar svg,
-#sidebar i {
-  /* Support both SVG and Font Awesome */
-  flex-shrink: 0 !important;
-  fill: var(--text-clr) !important; /* For SVG */
-  color: var(--accent-clr) !important; /* For Font Awesome */
-  font-size: 1.2em !important; /* Consistent size */
+/* Sub-menu styling (always visible, flowing) */
+#sidebar .sub-menu {
+  padding-left: 1.5em !important; /* Indent sub-items */
 }
 
-#sidebar a span,
-#sidebar .dropdown-btn span {
-  flex-grow: 1 !important;
+/* Sub-menu link styling */
+#sidebar .sub-menu li {
+  border-radius: 0.5em !important;
 }
 
-#sidebar a:hover,
-#sidebar .dropdown-btn:hover {
+#sidebar .sub-menu a {
+  padding: 0.5em 1em !important; /* Slightly less padding than main items */
+  color: var(--text-clr) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1em !important;
+}
+
+#sidebar .sub-menu a:hover {
   background-color: var(--hover-clr) !important;
   color: whitesmoke !important;
 }
 
-#sidebar a:hover i,
-#sidebar .dropdown-btn:hover i {
-  color: whitesmoke !important; /* Ensure icon color matches */
+#sidebar .sub-menu li.active a {
+  color: whitesmoke !important;
+  background-color: var(--accent-clr) !important;
 }
 
-#sidebar .sub-menu {
-  display: grid !important;
-  grid-template-rows: 0fr !important;
-  transition: 300ms ease-in-out !important;
+/* Icon styling */
+#sidebar i {
+  flex-shrink: 0 !important;
+  color: var(--accent-clr) !important;
+  font-size: 1.2em !important;
 }
 
-#sidebar .sub-menu > div {
-  overflow: hidden !important;
+#sidebar a span {
+  flex-grow: 1 !important;
 }
 
-#sidebar .sub-menu.show {
-  grid-template-rows: 1fr !important;
+#sidebar a:hover {
+  background-color: var(--hover-clr) !important;
+  color: whitesmoke !important;
 }
 
-.dropdown-btn svg,
-.dropdown-btn i {
-  /* Support rotation for both */
-  transition: 200ms ease !important;
+#sidebar a:hover i {
+  color: whitesmoke !important;
 }
 
-.rotate svg:last-child,
-.rotate i:last-child {
-  rotate: 180deg !important;
-}
-
-#sidebar .sub-menu a {
-  padding-left: 2em !important;
-}
-
+/* HR styling */
 #sidebar hr {
-  /* Added for your <hr> in sidebar */
   border: 0 !important;
   border-top: 1px solid var(--line-clr) !important;
   margin: 10px 0 !important;
 }
 
+/* Toggle button */
 #toggle-btn {
   padding: 1em !important;
   border: none !important;
   border-radius: 0.5em !important;
   background: none !important;
   cursor: pointer !important;
-  transition: transform 300ms ease-in-out !important; /* Smooth transition for toggle button */
+  transition: transform 300ms ease-in-out !important;
 }
 
-main {
+/* Main content */
+#main-content {
   padding: min(30px, 7%) !important;
+  transition: opacity 300ms ease-in-out !important;
 }
 
-main p {
+#main-content p {
   color: var(--secondary-text-clr) !important;
   margin-top: 5px !important;
   margin-bottom: 15px !important;
@@ -215,9 +215,9 @@ main p {
 .container {
   border: 1px solid var(--line-clr) !important;
   border-radius: 1em !important;
-  margin-bottom: 20px !important;
+  margin: 10px !important;
   background-color: white !important;
-  padding: min(3em, 15%) !important;
+  /* padding: min(3em, 15%) !important; */
 }
 
 .container h2,
@@ -225,18 +225,16 @@ main p {
   margin-top: 1em !important;
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 800px) {
-  /* Body grid configuration */
   body {
     grid-template-columns: 1fr !important;
   }
 
-  /* Main content padding adjustments */
-  main {
+  #main-content {
     padding: 2em 1em 60px 1em !important;
   }
 
-  /* Container settings */
   .container {
     border: none !important;
     padding: 0 !important;
@@ -254,6 +252,7 @@ main p {
     border-top-right-radius: 15px !important;
     box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.05) !important;
     background-color: #fff !important;
+    z-index: 1000 !important;
   }
 
   #sidebar.close {
@@ -267,6 +266,7 @@ main p {
     overflow: hidden !important;
     text-wrap: nowrap !important;
     box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.05) !important;
+    z-index: 1000 !important;
   }
 
   #sidebar.close > ul {
@@ -299,8 +299,7 @@ main p {
     height: 100% !important;
   }
 
-  #sidebar ul a,
-  #sidebar ul .dropdown-btn {
+  #sidebar ul a {
     width: 60px !important;
     height: 60px !important;
     padding: 0 !important;
@@ -308,38 +307,12 @@ main p {
     justify-content: center !important;
   }
 
-  #sidebar ul li span,
-  #sidebar ul li:first-child,
-  .dropdown-btn svg:last-child,
-  .dropdown-btn i:last-child {
+  #sidebar ul li span {
     display: none !important;
   }
 
-  #sidebar ul li .sub-menu.show {
-    position: fixed !important;
-    bottom: 60px !important;
-    left: 0 !important;
-    box-sizing: border-box !important;
-    height: 60px !important;
-    width: 100% !important;
-    background-color: var(--hover-clr) !important;
-    border-top: 1px solid var(--line-clr) !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
-
-  #sidebar ul li .sub-menu.show > div {
-    overflow-x: auto !important;
-  }
-
-  #sidebar ul li .sub-menu.show li {
-    display: inline-flex !important;
-  }
-
-  #sidebar ul li .sub-menu.show a {
-    box-sizing: border-box !important;
-    padding: 1em !important;
-    width: auto !important;
-    justify-content: center !important;
+  /* Hide sub-menu in mobile view */
+  #sidebar .sub-menu {
+    display: none !important;
   }
 }

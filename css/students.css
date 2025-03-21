@@ -1,0 +1,12 @@
+.students-content {
+  margin: 10px !important;
+}
+.card-table {
+  min-height: 100vh !important;
+  border: 1px solid var(--line-clr) !important;
+  border-radius: 1em !important;
+}
+.card-header-student {
+  border: 1px solid var(--line-clr) !important;
+  border-radius: 1em 1em 0 0 !important;
+}

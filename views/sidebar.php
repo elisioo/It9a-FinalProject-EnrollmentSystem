@@ -1,65 +1,96 @@
+<!-- <?php
+        session_start();
+        if (!isset($_SESSION['username'])) {
+            header("Location: ../resource/login.php");
+            exit();
+        }
+        $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
+        $subjects_active = in_array($current_page, ['subjects', 'sections']) ? 'active' : '';
+        ?> -->
+
 <nav id="sidebar">
     <div class="sidebar-header">
         <span class="logo">Enrollment System</span>
-        <button id="toggle-btn" onclick="toggleSidebar()">
-            <i class="fas fa-bars"></i>
+        <button id="toggle-btn" type="button">
+            <i class="fas fa-bars"></i> <!-- Keeping your original FontAwesome bars icon -->
         </button>
     </div>
     <ul>
-        <li class="">
-            <a href="#">
+        <!-- Dashboard -->
+        <li class="<?= ($current_page == 'dashboard') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=dashboard">
                 <i class="fas fa-th-large"></i>
                 <span>Dashboard</span>
             </a>
         </li>
-        <li>
-            <a href="#">
+        <!-- Students -->
+        <li class="<?= ($current_page == 'students') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=students">
                 <i class="fas fa-users"></i>
                 <span>Students</span>
             </a>
         </li>
-        <li>
-            <a href="#">
+        <!-- Teachers -->
+        <li class="<?= ($current_page == 'teachers') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=teachers">
                 <i class="fas fa-chalkboard-teacher"></i>
                 <span>Teachers</span>
             </a>
         </li>
-        <li>
-            <a href="#">
+        <!-- Subject/Section with modal trigger -->
+        <li class="nav-item <?= $subjects_active ?>">
+            <a href="#" class="menu-item" onclick="showModal(); return false;">
                 <i class="fas fa-book"></i>
                 <span>Subject/Section</span>
             </a>
         </li>
-        <li>
-            <a href="#">
+        <!-- Payment Tracking -->
+        <li class="<?= ($current_page == 'payments') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=payments">
                 <i class="fas fa-dollar-sign"></i>
                 <span>Payment Tracking</span>
             </a>
         </li>
-        <li>
-            <a href="#">
+        <!-- Class Schedule -->
+        <li class="<?= ($current_page == 'class_schedule') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=class_schedule">
                 <i class="fas fa-calendar-alt"></i>
                 <span>Class Schedule</span>
             </a>
         </li>
-        <li>
-            <a href="#">
+        <!-- Reports -->
+        <li class="<?= ($current_page == 'reports') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=reports">
                 <i class="fas fa-chart-line"></i>
                 <span>Reports</span>
             </a>
         </li>
-        <li>
-            <a href="#">
+        <!-- Account -->
+        <li class="<?= ($current_page == 'accounts') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=accounts">
                 <i class="fa-solid fa-user"></i>
                 <span>Account</span>
             </a>
         </li>
         <hr>
+        <!-- Logout -->
         <li>
-            <a href="#">
+            <a href="../logout.php">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Leave</span>
             </a>
         </li>
     </ul>
 </nav>
+
+<!-- Modal for Subject/Section selection -->
+<div id="subjectSectionModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="hideModal()">&times;</span>
+        <h3>Select an Option</h3>
+        <ul>
+            <li><a href="../layout/web-layout.php?page=subjects">Subjects</a></li>
+            <li><a href="../layout/web-layout.php?page=sections">Sections</a></li>
+        </ul>
+    </div>
+</div>
