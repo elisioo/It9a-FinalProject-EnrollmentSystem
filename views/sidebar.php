@@ -24,14 +24,14 @@
             </a>
         </li>
         <!-- Students -->
-        <li class="<?= ($current_page == 'students') ? 'active' : '' ?>">
+        <li class="<?= ($current_page == 'students' || $current_page == 'enrollment_form') ? 'active' : '' ?>">
             <a href="../layout/web-layout.php?page=students">
                 <i class="fas fa-users"></i>
                 <span>Students</span>
             </a>
         </li>
         <!-- Teachers -->
-        <li class="<?= ($current_page == 'teachers') ? 'active' : '' ?>">
+        <li class="<?= ($current_page == 'teachers' || $current_page == 'teacher_form') ? 'active' : '' ?>">
             <a href="../layout/web-layout.php?page=teachers">
                 <i class="fas fa-chalkboard-teacher"></i>
                 <span>Teachers</span>

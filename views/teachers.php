@@ -51,7 +51,9 @@
                         </div>
 
                         <!-- Add Teacher Button -->
-                        <button class="btn btn-primary add-teacher p-1 rounded-5">Add Teacher</button>
+                        <a href="../layout/web-layout.php?page=teacher_form">
+                            <button class="btn btn-primary add-teacher p-1 rounded-5">Add Teacher</button>
+                        </a>
                     </div>
                 </div>
             </div>

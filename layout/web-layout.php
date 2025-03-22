@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-  header("Location: ../login.php");
-  exit();
+    header("Location: ../login.php");
+    exit();
 }
 $username = ucfirst($_SESSION['username']);
 ?>
@@ -51,16 +51,16 @@ $username = ucfirst($_SESSION['username']);
     <?php include '../views/sidebar.php'; ?>
     <main id="main-content">
         <?php
-    $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
-    $allowed_pages = ['dashboard', 'students', 'teachers', 'subject-section', 'sections', 'payment', 'class_schedule', 'reports', 'accounts', 'enrollment_form'];
-    $page_path = __DIR__ . "/../views/{$page}.php";
+        $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
+        $allowed_pages = ['dashboard', 'students', 'teachers', 'subject-section', 'sections', 'payment', 'class_schedule', 'reports', 'accounts', 'enrollment_form', 'teacher_form'];
+        $page_path = __DIR__ . "/../views/{$page}.php";
 
-    if (in_array($page, $allowed_pages) && file_exists($page_path)) {
-      include $page_path;
-    } else {
-      echo "<h2>Page not found</h2>";
-    }
-    ?>
+        if (in_array($page, $allowed_pages) && file_exists($page_path)) {
+            include $page_path;
+        } else {
+            echo "<h2>Page not found</h2>";
+        }
+        ?>
     </main>
     <script src="../js/app.js"></script>
 </body>

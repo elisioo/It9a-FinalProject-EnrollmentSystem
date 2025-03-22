@@ -103,6 +103,7 @@ tr {
   height: 30px;
   background-color: #305cde;
   border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .add-teacher:hover {
