@@ -22,7 +22,6 @@ html {
 body {
   min-height: 100vh !important;
   min-height: 100dvh !important;
-  background-color: var(--base-clr) !important;
   color: var(--text-clr) !important;
   display: grid !important;
   grid-template-rows: auto 1fr !important;

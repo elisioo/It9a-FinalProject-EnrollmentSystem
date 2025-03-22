@@ -66,27 +66,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="statics/css/bootstrap.min.css">
     <script src="statics/js/bootstrap.bundle.js"></script>
     <style>
-    body {
-        background-color: var(--base-clr) !important;
-        min-height: 100vh !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
+        body {
+            background: rgb(229, 234, 255);
+            background: radial-gradient(circle, rgba(229, 234, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(229, 234, 255, 1) 100%);
+            min-height: 100vh !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
 
-    .signup-container {
-        max-width: 400px !important;
-    }
+        .signup-container {
+            max-width: 400px !important;
+        }
 
-    .btn-custom {
-        background-color: #305CDE !important;
-        border-color: #305CDE !important;
-    }
+        .btn-custom {
+            background-color: #305CDE !important;
+            border-color: #305CDE !important;
+        }
 
-    .btn-custom:hover {
-        background-color: #284BB3 !important;
-        border-color: #284BB3 !important;
-    }
+        .btn-custom:hover {
+            background-color: #284BB3 !important;
+            border-color: #284BB3 !important;
+        }
     </style>
 </head>
 
@@ -100,9 +101,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="signup-container w-100 p-4 bg-white rounded shadow">
                     <h2 class="text-center mb-4">Sign Up</h2>
                     <?php if (isset($error)): ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?= htmlspecialchars($error) ?>
-                    </div>
+                        <div class="alert alert-danger" role="alert">
+                            <?= htmlspecialchars($error) ?>
+                        </div>
                     <?php endif; ?>
                     <form method="POST" action="">
                         <div class="mb-3">
