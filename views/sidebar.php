@@ -11,11 +11,11 @@
 <nav id="sidebar">
     <div class="sidebar-header">
         <span class="logo">Enrollment System</span>
-        <button id="toggle-btn" type="button">
-        <i class="fa-solid fa-bars-staggered"></i> <!-- Keeping your original FontAwesome bars icon -->
+        <button id="toggle-btn">
+            <i class="fa-solid fa-bars-staggered"></i> <!-- Keeping your original FontAwesome bars icon -->
         </button>
-    </div>  
-    <ul>    
+    </div>
+    <ul>
         <!-- Dashboard -->
         <li class="<?= ($current_page == 'dashboard') ? 'active' : '' ?>">
             <a href="../layout/web-layout.php?page=dashboard">
@@ -38,15 +38,15 @@
             </a>
         </li>
         <!-- Subject/Section with modal trigger -->
-        <li class="nav-item <?= $subjects_active ?>">
-            <a href="#" class="menu-item" onclick="showModal(); return false;">
+        <li class="<?= ($current_page == 'subject-section') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=subject-section">
                 <i class="fas fa-book"></i>
                 <span>Subject/Section</span>
             </a>
         </li>
         <!-- Payment Tracking -->
-        <li class="<?= ($current_page == 'payments') ? 'active' : '' ?>">
-            <a href="../layout/web-layout.php?page=payments">
+        <li class="<?= ($current_page == 'payment') ? 'active' : '' ?>">
+            <a href="../layout/web-layout.php?page=payment">
                 <i class="fas fa-dollar-sign"></i>
                 <span>Payment Tracking</span>
             </a>

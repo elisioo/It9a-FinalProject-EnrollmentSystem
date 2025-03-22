@@ -1,6 +1,7 @@
-.students-content {
+.teachers-content {
   margin: 10px !important;
 }
+
 .card-table {
   min-height: 100vh !important;
   /* border: 1px solid var(--line-clr) !important; */
@@ -9,7 +10,8 @@
   -webkit-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.26);
 }
-.card-header-student {
+
+.card-header-teacher {
   /* border: 1px solid var(--line-clr) !important; */
   border-radius: 1em 1em !important;
   box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.26);
@@ -90,8 +92,8 @@ tr {
   background-color: #fff;
 }
 
-/* Style for the Add Student button */
-.add-student {
+/* Style for the Add Teacher button */
+.add-teacher {
   padding: 8px 16px;
   font-size: 14px;
   border-radius: 20px;
@@ -101,7 +103,7 @@ tr {
   border: none;
 }
 
-.add-student:hover {
+.add-teacher:hover {
   background-color: #0056b3;
 }
 

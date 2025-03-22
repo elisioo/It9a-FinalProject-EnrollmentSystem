@@ -2,9 +2,11 @@
 <link rel="stylesheet" href="../css/dashboard.css">
 
 
+
 <div class="dashboard-content my-auto">
     <!-- Pie Charts for HUMMS, ABM, STEM -->
-    <div class="row mb-4 justify-content-center">
+    <p class="h4" style="  color: var(--text-clr) !important;">Dashboard</p>
+    <div class="row mb-2 justify-content-center">
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-3">
@@ -44,7 +46,7 @@
     </div>
 
     <!-- Student Distribution Pie Chart and Bar Chart -->
-    <div class="row mb-4">
+    <div class="row mb-2">
         <div class="col-md-3">
             <div class="card card-abm">
                 <div class="card-body text-center">
