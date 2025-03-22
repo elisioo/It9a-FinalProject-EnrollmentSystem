@@ -1,3 +1,5 @@
+<?php
+?>
 <link rel="stylesheet" href="../css/teachers.css">
 
 <div class="teachers-content">

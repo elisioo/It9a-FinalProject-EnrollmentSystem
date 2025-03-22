@@ -1,4 +1,6 @@
 <!-- ../views/dashboard.php -->
+<?php
+?>
 <link rel="stylesheet" href="../css/dashboard.css">
 
 <div class="dashboard-content my-auto">

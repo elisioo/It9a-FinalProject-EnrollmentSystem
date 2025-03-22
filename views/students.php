@@ -1,3 +1,5 @@
+<?php
+?>
 <link rel="stylesheet" href="../css/students.css">
 
 <div class="students-content">
