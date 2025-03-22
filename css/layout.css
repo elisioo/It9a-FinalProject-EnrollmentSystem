@@ -112,7 +112,7 @@ body {
   top: 10px !important;
   align-self: start !important;
   transition: width 300ms ease-in-out !important;
-  overflow: hidden !important;
+  overflow-y: auto !important;
   text-wrap: nowrap !important;
 }
 
@@ -284,6 +284,66 @@ body {
   margin-bottom: 15px !important;
 }
 
+.user-icon {
+  font-size: 20px;
+  color: #34502b;
+  /* Match account.php primary color */
+  text-decoration: none;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.user-icon:hover {
+  color: #4a6f3e;
+  /* Slightly lighter shade for hover */
+}
+
+.dropdown-menu {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Match account.php shadow */
+  min-width: 180px;
+  /* Ensure enough space for username */
+}
+
+.dropdown-item {
+  padding: 8px 15px;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+  /* Light gray hover */
+  color: #34502b;
+}
+
+.dropdown-item.text-danger {
+  color: #dc3545;
+  /* Bootstrap danger color */
+}
+
+.dropdown-item.text-danger:hover {
+  background-color: #fce6e8;
+  /* Light red hover */
+  color: #c82333;
+}
+
+.dropdown-divider {
+  margin: 5px 0;
+  border-color: #ddd;
+  /* Subtle divider */
+}
+
+@media (max-width: 768px) {
+  .user-icon {
+    margin-left: 10px;
+    /* Reduce margin on smaller screens */
+  }
+}
+
 /* Media queries for responsiveness */
 @media (max-width: 800px) {
   body {
@@ -335,6 +395,7 @@ body {
     box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.05) !important;
     background-color: #fff !important;
     z-index: 1000 !important;
+    overflow-y: hidden !important;
   }
 
   #sidebar.close {

@@ -183,13 +183,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="col-md-4 mb-3 p-1">
                         <label class="form-label">Gender</label><br>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline m-1">
                             <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
-                            <label class="form-check-label" for="male">Male</label>
+                            <label class="form-check-label m-1" for="male">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
-                            <label class="form-check-label" for="female">Female</label>
+                            <label class="form-check-label m-1" for="female">Female</label>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3 p-1">

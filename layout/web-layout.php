@@ -30,7 +30,21 @@ $username = ucfirst($_SESSION['username']);
         <div class="vl"></div>
         <h2>Enrollment System</h2>
         <div class="profile-container">
-            <i class="fa-solid fa-circle-user"></i>
+            <div class="dropdown">
+                <a href="#" class="user-icon" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false"
+                    title="User Menu">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="web-layout.php?page=accounts">Accounts</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger" href="../logout.php">Logout</a></li>
+                </ul>
+            </div>
             <p><?php echo $username; ?></p>
         </div>
     </header>
