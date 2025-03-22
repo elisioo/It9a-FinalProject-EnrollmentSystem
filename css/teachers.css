@@ -107,6 +107,8 @@ tr {
 
 .add-teacher:hover {
   background-color: #0056b3;
+  box-shadow: 0 1px 2px #111111;
+  transform: translateY(-2px);
 }
 
 /* Adjust the search bar to match the image */
