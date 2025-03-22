@@ -1,7 +1,6 @@
 <?php
 ?>
 <link rel="stylesheet" href="../css/teachers.css">
-
 <div class="teachers-content">
     <div class="row mb-3">
         <div class="row">

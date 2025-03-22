@@ -91,7 +91,8 @@ tr {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #f2f5ff;
+  cursor: pointer !important;
 }
 
 /* Style for the Add Teacher button */
