@@ -284,18 +284,6 @@ body {
   margin-bottom: 15px !important;
 }
 
-.container {
-  border: 1px solid var(--line-clr) !important;
-  border-radius: 1em !important;
-  margin: 10px !important;
-  background-color: white !important;
-}
-
-.container h2,
-.container p {
-  margin-top: 1em !important;
-}
-
 /* Media queries for responsiveness */
 @media (max-width: 800px) {
   body {
@@ -411,10 +399,5 @@ body {
 
   #main-content {
     padding: 1em 1em 60px 1em !important;
-  }
-
-  .container {
-    border: none !important;
-    padding: 0 !important;
   }
 }

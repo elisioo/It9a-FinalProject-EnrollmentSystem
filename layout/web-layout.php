@@ -38,7 +38,7 @@ $username = ucfirst($_SESSION['username']);
     <main id="main-content">
         <?php
     $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
-    $allowed_pages = ['dashboard', 'students', 'teachers', 'subject-section', 'sections', 'payment', 'class_schedule', 'reports', 'accounts'];
+    $allowed_pages = ['dashboard', 'students', 'teachers', 'subject-section', 'sections', 'payment', 'class_schedule', 'reports', 'accounts', 'enrollment_form'];
     $page_path = __DIR__ . "/../views/{$page}.php";
 
     if (in_array($page, $allowed_pages) && file_exists($page_path)) {

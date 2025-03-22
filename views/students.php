@@ -50,7 +50,9 @@
                         </div>
 
                         <!-- Add Student Button -->
-                        <button class="btn btn-primary add-student">Add Student</button>
+                        <a href="../layout/web-layout.php?page=enrollment_form">
+                            <button class="btn btn-primary add-student">Add Student</button>
+                        </a>
                     </div>
                 </div>
             </div>
