@@ -58,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="statics/js/bootstrap.bundle.js"></script>
     <style>
         body {
-            background: rgb(229, 234, 255);
-            background: radial-gradient(circle, rgba(229, 234, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(229, 234, 255, 1) 100%);
+            background: rgb(155, 182, 243);
+            background: linear-gradient(137deg, rgba(155, 182, 243, 1) 0%, rgba(203, 220, 255, 1) 21%, rgba(237, 243, 255, 0.999964951801033) 52%, rgba(184, 206, 255, 1) 100%, rgba(184, 206, 255, 1) 100%);
             min-height: 100vh !important;
             display: flex !important;
             justify-content: center !important;
@@ -68,6 +68,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         .login-container {
             max-width: 400px !important;
+            margin-right: 100px !important;
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.05) !important;
+            border-radius: 16px !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+            backdrop-filter: blur(10.5px) !important;
+            -webkit-backdrop-filter: blur(10.5px) !important;
         }
 
         .btn-custom {
@@ -79,17 +86,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-color: #284BB3 !important;
             border-color: #284BB3 !important;
         }
+
+        .col-6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <h1>For test</h1>
-            </div>
-            <div class="col-6">
-                <div class="login-container w-100 p-4 bg-white rounded shadow">
+            <div class="col-6 ">
+                <div class="login-container w-100 p-4  bg-white rounded shadow">
                     <h2 class="text-center mb-4">Login</h2>
                     <?php if (isset($error)): ?>
                         <div class="alert alert-danger" role="alert">
@@ -110,6 +120,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </form>
                     <p class="text-center mt-3">Don't have an account? <a href="signup.php">Sign Up here</a></p>
                 </div>
+            </div>
+            <div class="col-6">
+                <p>Effortless enrollment, seamless access.</p>
+                <img src="img/logo1.png" alt="" width="500" height="500" style="  ">
+
             </div>
         </div>
     </div>

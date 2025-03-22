@@ -5,7 +5,8 @@
 
 <div class="dashboard-content my-auto">
 
-    <p class="h4" style="color: var(--text-clr) !important;">Dashboard</p>
+    <p class="h4" style="color: var(--text-clr) !important;">
+        Dashboard</p>
     <hr>
     <div class="row mb-2 justify-content-center">
         <div class="col-md-4">
