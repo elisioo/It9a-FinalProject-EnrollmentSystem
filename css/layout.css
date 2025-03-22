@@ -303,9 +303,8 @@ body {
 .dropdown-menu {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Match account.php shadow */
   min-width: 180px;
-  /* Ensure enough space for username */
+  padding: 10px !important;
 }
 
 .dropdown-item {
@@ -340,7 +339,6 @@ body {
 @media (max-width: 768px) {
   .user-icon {
     margin-left: 10px;
-    /* Reduce margin on smaller screens */
   }
 }
 

@@ -4,8 +4,8 @@
 
 <div class="students-content">
     <div class="row mb-3">
-        <div class="row">
-            <div class="card p-3 card-header-student">
+        <div class="row row-header-student">
+            <div class="card p-3 card-header-student sticky-card">
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="card-title d-flex align-items-center">
