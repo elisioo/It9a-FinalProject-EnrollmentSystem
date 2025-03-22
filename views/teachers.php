@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../css/teachers.css">
 
-<div class="col-md-12 teachers-content">
+<div class="teachers-content">
     <div class="row mb-3">
         <div class="row">
             <div class="card p-3 card-header-teacher">

@@ -1,35 +1,40 @@
 <!-- ../views/dashboard.php -->
 <link rel="stylesheet" href="../css/dashboard.css">
 
-
-
 <div class="dashboard-content my-auto">
-    <!-- Pie Charts for HUMMS, ABM, STEM -->
-    <p class="h4" style="  color: var(--text-clr) !important;">Dashboard</p>
+
+    <p class="h4" style="color: var(--text-clr) !important;">Dashboard</p>
+
     <div class="row mb-2 justify-content-center">
-        <div class="col-md-3">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card card-first">
-                        <div class="card-body text-center">
-                            <h5>HUMMS</h5>
-                            <canvas id="hummsChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card card-first">
-                        <div class="card-body text-center">
-                            <h5>STEM</h5>
-                            <canvas id="stemChart"></canvas>
-                        </div>
-                    </div>
+        <div class="col-md-4">
+            <div class="card card-first">
+                <div class="card-body text-center">
+                    <h5>HUMMS</h5>
+                    <canvas id="hummsChart"></canvas>
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-4">
+            <div class="card card-first">
+                <div class="card-body text-center">
+                    <h5>STEM</h5>
+                    <canvas id="stemChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-abm">
+                <div class="card-body text-center">
+                    <h5>ABM</h5>
+                    <canvas id="abmChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mb-2">
+        <div class="col-md-6">
             <div class="card card-students">
                 <div class="card-body">
                     <h5>Students</h5>
@@ -42,21 +47,7 @@
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <!-- Student Distribution Pie Chart and Bar Chart -->
-    <div class="row mb-2">
-        <div class="col-md-3">
-            <div class="card card-abm">
-                <div class="card-body text-center">
-                    <h5>ABM</h5>
-                    <canvas id="abmChart"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-9">
+        <div class="col-md-6">
             <div class="card card-bar">
                 <div class="card-body">
                     <canvas id="barChart"></canvas>
@@ -65,7 +56,6 @@
         </div>
     </div>
 
-    <!-- Stat Cards -->
     <div class="row">
         <div class="col-md-4">
             <div class="card stat-card">
@@ -186,21 +176,18 @@
         data: {
             labels: ['STEM', 'ABM', 'HUMMS'],
             datasets: [{
-                    label: 'STEM',
-                    data: [80, 0, 0],
-                    backgroundColor: '#305cde'
-                },
-                {
-                    label: 'ABM',
-                    data: [0, 60, 0],
-                    backgroundColor: '#5e63ff'
-                },
-                {
-                    label: 'HUMMS',
-                    data: [0, 0, 40],
-                    backgroundColor: '#d3d3d3'
-                }
-            ]
+                label: 'STEM',
+                data: [80, 0, 0],
+                backgroundColor: '#305cde'
+            }, {
+                label: 'ABM',
+                data: [0, 60, 0],
+                backgroundColor: '#5e63ff'
+            }, {
+                label: 'HUMMS',
+                data: [0, 0, 40],
+                backgroundColor: '#d3d3d3'
+            }]
         },
         options: {
             indexAxis: 'y',

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../css/students.css">
 
-<div class="col-md-12 students-content">
+<div class="students-content">
     <div class="row mb-3">
         <div class="row">
             <div class="card p-3 card-header-student">
@@ -17,7 +17,7 @@
                                         style="display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid #ddd; border-radius: 4px; max-height: 200px; overflow-y: auto; z-index: 1000;">
                                     </div>
                                 </div>
-                            </form> 
+                            </form>
                         </div>
                     </div>
 

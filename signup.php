@@ -91,30 +91,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <div class="signup-container w-100 p-4 bg-white rounded shadow">
-        <h2 class="text-center mb-4">Sign Up</h2>
-        <?php if (isset($error)): ?>
-        <div class="alert alert-danger" role="alert">
-            <?= htmlspecialchars($error) ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="h1">For test</p>
+            </div>
+            <div class="col-md-6">
+                <div class="signup-container w-100 p-4 bg-white rounded shadow">
+                    <h2 class="text-center mb-4">Sign Up</h2>
+                    <?php if (isset($error)): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= htmlspecialchars($error) ?>
+                    </div>
+                    <?php endif; ?>
+                    <form method="POST" action="">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm_password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-custom text-white w-100">Sign Up</button>
+                    </form>
+                    <p class="text-center mt-3">Already have an account? <a href="login.php">Login here</a></p>
+                </div>
+            </div>
         </div>
-        <?php endif; ?>
-        <form method="POST" action="">
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username"
-                    value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <div class="mb-3">
-                <label for="confirm_password" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
-            </div>
-            <button type="submit" class="btn btn-custom text-white w-100">Sign Up</button>
-        </form>
-        <p class="text-center mt-3">Already have an account? <a href="login.php">Login here</a></p>
     </div>
 </body>
 
